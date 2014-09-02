@@ -1,0 +1,249 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a active {
+    text-decoration: none;
+}
+#calendar{
+    padding: 0px 10px;
+}
+
+.month-title{
+    color: #687D91;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+    
+}
+.month-title .month{
+    color: #f60;
+}
+.low_calendar {
+    overflow:hidden;
+    margin:10px;
+    border:1px solid #dfdfdf
+}
+.low_calendar_top {
+    height:30px;
+    line-height:30px;
+    overflow:hidden;
+    padding:3px 0 2px 0;
+    position:relative;
+    background:#fe6012
+}
+.top_left {
+    position:absolute;
+    width:30px;
+    height:22px;
+    overflow:hidden;
+    top:5px;
+    left:10px;
+    z-index:5;
+    border:1px #cae2fa solid;
+    background:#eef7ff
+}
+.last_mon {
+    cursor:pointer;
+    height:0;
+    width:0;
+    overflow:hidden;
+    font-size:0;
+    line-height:0;
+    border-width:6px;
+    border-color:transparent #FE6012 transparent transparent;
+    border-style:dashed solid dashed dashed;
+    position:absolute;
+    left:5px;
+    top:5px
+}
+.top_right {
+    position:absolute;
+    width:30px;
+    height:22px;
+    overflow:hidden;
+    top:5px;
+    right:10px;
+    z-index:5;
+    border:1px #cae2fa solid;
+    background:#eef7ff
+}
+.next_mon {
+    cursor:pointer;
+    height:0;
+    width:0;
+    overflow:hidden;
+    font-size:0;
+    line-height:0;
+    border-width:6px;
+    border-color:transparent transparent transparent #FE6012;
+    border-style:dashed dashed dashed solid;
+    position:absolute;
+    right:5px;
+    top:5px
+}
+.top_middle {
+    width:100%;
+    display:inline-block;
+    position:relative;
+    font-size:16px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    margin-top:-35px;
+    z-index:4
+}
+.calendar_bor {
+    border-bottom:3px solid #007bd8;
+    border-right:3px solid #007bd8;
+    border-left:3px solid #007bd8
+}
+.calTable {
+    width:100%;
+    border-collapse:collapse;
+    margin:0;
+    /*padding:0px 10px;*/
+}
+.calTable tbody{
+    /*display: block;*/
+    /*width: 100%;*/
+}
+.calTable th {
+    font-size:12px;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    vertical-align:middle;
+    border-top:1px solid #D7DEE4;
+    color:#999;
+    width: 14.286%;
+}
+.calBox{
+    padding: 2px;
+}
+.calTable .week_day {
+    color:#F96602
+}
+.passed-day{
+    color:#ccc
+}
+.futrue-day{
+    color: #60768B;
+}
+.calTable td {
+    /*border-bottom:1px solid #f1f1f1;
+    border-left:1px solid #f1f1f1;*/
+    vertical-align:top;
+    /*height:36px;*/
+    background:#F7F8FA;
+    text-align:center
+}
+.calTable td .everyday {
+    background-color: #F0F4F7;
+    position:relative;
+}
+.calTable td .everyday a {
+    cursor:pointer;
+    height:36px;
+    display:block;
+    width:100%;
+    position:relative
+}
+.calTable td .everyday a:hover {
+    text-decoration:none
+}
+.calTable td .everyday .sale {
+    position:absolute;
+    width:9px;
+    height:9px;
+    overflow:hidden;
+    background:url(http://img1.40017.cn/touch/cn/public/icon_sale.png) no-repeat;
+    background-size:9px 9px;
+    display:block;
+    left:2px;
+    top:2px
+}
+.calTable td .everyday .sp_time {
+    display:block;
+    font-size:14px;
+    font-weight:700;
+    /*color:#60768B;*/
+    line-height:28px
+}
+.calTable td .everyday a .sp_time {
+    /*color:#60768B*/
+}
+.calTable td .everyday a .sp_pice {
+    font-size:10px;
+    color:#f60;
+    margin-top:-8px
+}
+.calTable td .today a {
+    color:#f60;
+    position:relative;
+    font-size:12px;
+    /*-moz-box-shadow:0 0 5px #dcdeeb inset;
+    -webkit-box-shadow:0 0 5px #dcdeeb inset;
+    box-shadow:0 0 5px #8d8d8d dcdeeb*/
+}
+.calTable td .today a .sp_time {
+    color:#0060FD
+}
+.calTable td .last_day {
+    cursor:default;
+    height:36px
+}
+.calTable td a.last_day {
+    cursor:default
+}
+.calTable td .last_day .sp_time,.calTable td a.last_day .sp_time {
+    /*color:#ccc*/
+}
+.holiday{
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #60768B;
+}
+#holidayList {
+    margin:0 10px
+}
+#holidayList li {
+    position:relative;
+    height:40px;
+    line-height:40px;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    margin-bottom:-1px
+}
+#holidayList li span {
+    width:50%;
+    display:inline-block
+}
+#holidayList li span em {
+    width:9px;
+    height:9px;
+    overflow:hidden;
+    background:url(http://img1.40017.cn/touch/cn/public/icon_sale.png) no-repeat;
+    background-size:9px 9px;
+    display:inline-block;
+    vertical-align:middle;
+    margin:-4px 10px 0 5px
+}
+.next_txt {
+    position:absolute;
+    left:48px;
+    top:3px;
+    z-index:5;
+    color:#fff
+}
+.last_txt {
+    position:absolute;
+    right:48px;
+    top:3px;
+    z-index:5;
+    color:#fff
+}

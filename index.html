@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="zepto.min.js"></script>
+    <script src="laolizi_calendar.js"></script>
+    <link rel='stylesheet' href='laolizi_calendar.css' />
+</head>
+<body >
+    <div id="calendar"></div>
+</body>
+<script type="text/javascript">
+    var product = {priceCanlendar: {"2014-10-13":{"retail_price":"148"},"2014-10-15":{"retail_price":"188"}}};
+    $("#calendar").calendar({
+        priceCanlendar:product.priceCanlendar,
+        clickCallback:function(date,price){
+            alert("you clicked "+date+"! And the price is "+price);
+        }
+    });
+    
+</script>
+</html>
+    
